@@ -60,11 +60,13 @@ export default class Pokedex extends Component {
       <div className="pokedex">
         {this.state.pokemons.map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon} />)[index]}
       </div>
-      <div className="btn">
+      <div className="btn-types">
         {pokemonsTypes.map(type => <Button key={type} type={type} onClick={() => this.handleFilterByType(type)} />)}
       </div>
-       <Button type={'All'} onClick={this.handleClearFilter}/>
-       <button className="btn" onClick={this.nextPokemon}>Próximo Pokemon</button>
+      <div className="btn">
+        <Button type={'All'} onClick={this.handleClearFilter}/>
+        <Button type={'Próximo Pokemon'} onClick={this.nextPokemon}/>
+      </div>
     </>
     );
   }
