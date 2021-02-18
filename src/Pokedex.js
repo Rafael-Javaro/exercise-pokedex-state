@@ -6,7 +6,7 @@ export default class Pokedex extends Component {
     super();
 
     this.state = {
-      pokemonType: '',
+      pokemon:'',
     }
 
     this.handleFilterByFire = this.handleFilterByFire.bind(this);
